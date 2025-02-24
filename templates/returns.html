@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Returns Management</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Returns Management</h1>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/inventory">Inventory</a>
+      <a href="/sales">Sales</a>
+      <a href="/purchases">Purchases</a>
+      <a href="/returns">Returns</a>
+      <a href="/reports">Reports</a>
+      <a href="/manufacturing">Manufacturing</a>
+      <a href="/all-data">All Data</a>
+    </nav>
+  </header>
+  <section>
+    <h2>Returns Records</h2>
+    <table id="returnsTable">
+      {% for row in table %}
+      <tr>
+        {% for cell in row %}
+        <td contenteditable="true">{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </table>
+    <button onclick="saveTable('returns')">Save Changes</button>
+  </section>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

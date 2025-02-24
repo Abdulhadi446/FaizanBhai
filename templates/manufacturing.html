@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fabric Manufacturing Process & Weekly Report</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Fabric Manufacturing Process & Weekly Report</h1>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/inventory">Inventory</a>
+      <a href="/sales">Sales</a>
+      <a href="/purchases">Purchases</a>
+      <a href="/returns">Returns</a>
+      <a href="/reports">Reports</a>
+      <a href="/manufacturing">Manufacturing</a>
+      <a href="/all-data">All Data</a>
+    </nav>
+  </header>
+  <section>
+    <h2>Fabric Manufacturing Process with Stock and Weekly Report Requirements</h2>
+    
+    <h3>1. Yarn Purchase</h3>
+    <p><strong>Description:</strong> Yarn is purchased as raw material for fabric manufacturing.</p>
+    <ul>
+      <li>Yarn is purchased from suppliers.</li>
+      <li>Quantity and rate are checked before entering it into stock.</li>
+      <li>Purchase entry is recorded in inventory software (invoice details, supplier, amount, quantity, etc.).</li>
+      <li><strong>Waste Consideration:</strong> Some waste occurs during yarn purchase (e.g., damaged yarn, defective rolls).</li>
+      <li><strong>Waste Tracking:</strong> Waste is recorded separately to reflect material losses.</li>
+    </ul>
+    
+    <h3>2. Stock Entry of Yarn</h3>
+    <p><strong>Description:</strong> Yarn is entered into stock for manufacturing.</p>
+    <ul>
+      <li>Stock software is updated with yarn details.</li>
+      <li>Stock quantity and value are calculated.</li>
+      <li>Manual stock ledger entry records each transaction.</li>
+      <li><strong>Waste Consideration:</strong> Some yarn may be lost due to movement or handling.</li>
+      <li><strong>Waste Tracking:</strong> Waste is recorded when stock is moved.</li>
+      <li><strong>Stock Summary Report:</strong> Weekly summary of purchased, used, remaining yarn, and waste.</li>
+    </ul>
+    
+    <h3>3. Yarn Sent to Weft Production</h3>
+    <p><strong>Description:</strong> Yarn is transferred to the weft production section.</p>
+    <ul>
+      <li>Required quantity is selected and sent to weft production.</li>
+      <li>Dispatch entry is recorded (stock update).</li>
+      <li><strong>Waste Consideration:</strong> Some yarn is wasted during weft production (e.g., breakage, defective sections).</li>
+      <li><strong>Waste Tracking:</strong> Yarn loss is tracked and recorded.</li>
+      <li><strong>Stock Report:</strong> Daily and weekly summary of yarn used in weft production.</li>
+    </ul>
+    
+    <h3>4. Weft Production by Labor</h3>
+    <p><strong>Description:</strong> Labor converts yarn into weft.</p>
+    <ul>
+      <li>Material is provided to laborers for weft production.</li>
+      <li>Labor work records are maintained.</li>
+      <li>Labor wages are recorded in the ledger.</li>
+      <li><strong>Waste Consideration:</strong> Some waste is generated during weft production (e.g., defective yarn, excess production).</li>
+      <li><strong>Waste Tracking:</strong> Waste generated during production is recorded.</li>
+    </ul>
+    
+    <h3>5. Weft Sent for Dyeing</h3>
+    <p><strong>Description:</strong> Weft is sent for dyeing.</p>
+    <ul>
+      <li>Weft is dispatched for dyeing.</li>
+      <li>Dyeing material (colors, chemicals) stock and consumption are updated.</li>
+      <li>Dyeing process begins in the dyeing department.</li>
+      <li><strong>Waste Consideration:</strong> Excess dye, chemicals, and fabric defects occur.</li>
+      <li><strong>Waste Tracking:</strong> Excess dye and material waste are recorded.</li>
+    </ul>
+    
+    <h3>6. Dyeing Ledger Entry</h3>
+    <p><strong>Description:</strong> Records dyeing cost and payment.</p>
+    <ul>
+      <li>Cost records include dye, labor, and chemicals.</li>
+      <li>Payment entries for dyeing and labor are recorded.</li>
+      <li><strong>Waste Consideration:</strong> Waste affects production cost.</li>
+      <li><strong>Waste Tracking:</strong> Waste is included in financial ledgers.</li>
+    </ul>
+    
+    <h3>7. Weft Sent to Second Labor for Fabric Production</h3>
+    <p><strong>Description:</strong> Dyed weft is sent for fabric production.</p>
+    <ul>
+      <li>Weft is handed over to second labor.</li>
+      <li>Labor work records are maintained.</li>
+      <li>Labor wages are recorded.</li>
+      <li><strong>Waste Consideration:</strong> Some waste occurs during conversion to fabric.</li>
+      <li><strong>Waste Tracking:</strong> Waste is recorded during production.</li>
+    </ul>
+    
+    <h3>8. Fabric Dyeing</h3>
+    <p><strong>Description:</strong> Fabric is sent for dyeing.</p>
+    <ul>
+      <li>Material, dyeing chemicals, and labor details are recorded.</li>
+      <li>Dyeing cost and payment entries are made.</li>
+      <li><strong>Waste Consideration:</strong> Over-dyeing, color bleeding, and dye leftovers occur.</li>
+      <li><strong>Waste Tracking:</strong> Dyeing waste is included in production costs.</li>
+    </ul>
+    
+    <h3>9. Embroidery Process</h3>
+    <p><strong>Description:</strong> Fabric is sent for embroidery.</p>
+    <ul>
+      <li>Fabric is transferred to the embroidery department.</li>
+      <li>Embroidery material and labor details are tracked.</li>
+      <li>Payment entries are made.</li>
+      <li><strong>Waste Consideration:</strong> Thread wastage, defective stitching, and incomplete patterns occur.</li>
+      <li><strong>Waste Tracking:</strong> Waste is recorded during embroidery.</li>
+    </ul>
+    
+    <h3>10. Final Fabric Production and Quality Check</h3>
+    <p><strong>Description:</strong> Final fabric is inspected and prepared for delivery.</p>
+    <ul>
+      <li>Final production is completed.</li>
+      <li>Quality check (QC) is performed.</li>
+      <li>Defective fabric is rejected or marked as waste.</li>
+      <li><strong>Waste Consideration:</strong> Rejected fabric and cutting waste occur.</li>
+      <li><strong>Waste Tracking:</strong> Defective and rejected fabric is recorded.</li>
+    </ul>
+    
+    <h3>11. Payment Entries for Various Departments</h3>
+    <p><strong>Description:</strong> Payments are recorded for labor, dyeing, embroidery, etc.</p>
+    <ul>
+      <li>Payments are created for each department.</li>
+      <li>Supplier and labor accounts are finalized.</li>
+      <li><strong>Waste Consideration:</strong> Waste material is accounted for separately.</li>
+    </ul>
+    
+    <h3>12. Final Product Stock and Delivery</h3>
+    <p><strong>Description:</strong> Final fabric stock is updated and prepared for delivery.</p>
+    <ul>
+      <li>Inventory is updated.</li>
+      <li>Packaging and dispatch details are recorded.</li>
+      <li><strong>Waste Consideration:</strong> Damaged fabric during packaging.</li>
+      <li><strong>Waste Tracking:</strong> Waste during packaging and dispatch is recorded.</li>
+    </ul>
+    
+    <h3>Stock Summary Report Metrics</h3>
+    <ul>
+      <li>Total yarn purchased</li>
+      <li>Total yarn used</li>
+      <li>Waste generated</li>
+      <li>Remaining stock</li>
+    </ul>
+    
+    <h2>Fabric Manufacturing: Sales, Purchase, Returns, Profit & Daily Cash Flow</h2>
+    
+    <h3>1. Fabric Manufacturing Completion</h3>
+    <ul>
+      <li>Fabric undergoes quality checks.</li>
+      <li>Inventory is updated with final stock.</li>
+    </ul>
+    
+    <h3>2. Fabric Sale</h3>
+    <ul>
+      <li>Sale orders are received and invoices generated.</li>
+      <li>Stock and payment entries are updated.</li>
+      <li>Profit Calculation: Difference between sale price and manufacturing cost.</li>
+      <li>Cash Flow: Revenue is recorded.</li>
+    </ul>
+    
+    <h3>3. Fabric Purchase (Raw Material)</h3>
+    <ul>
+      <li>Raw materials like yarn, dyes, and chemicals are ordered.</li>
+      <li>Invoices, stock updates, and payment records are maintained.</li>
+      <li>Cash Flow: Expenses recorded.</li>
+    </ul>
+    
+    <h3>4. Sale Return (Fabric)</h3>
+    <ul>
+      <li>Defective or unsatisfactory fabric is returned by customers.</li>
+      <li>Stock and payment adjustments are made.</li>
+      <li>Cash Flow: Impact on revenue recorded.</li>
+    </ul>
+    
+    <h3>5. Purchase Return (Raw Material)</h3>
+    <ul>
+      <li>Defective or incorrect raw materials are returned to suppliers.</li>
+      <li>Stock and payment adjustments are recorded.</li>
+      <li>Cash Flow: Outflow adjustments recorded.</li>
+    </ul>
+    
+    <h3>6. Profit Calculation</h3>
+    <ul>
+      <li>Revenue: Total fabric sale value.</li>
+      <li>Cost of Goods Sold (COGS): Manufacturing costs including raw materials, labor, dyeing, embroidery, etc.</li>
+      <li>Gross Profit: Difference between total sale price and COGS.</li>
+      <li>Net Profit: Gross profit minus operating expenses.</li>
+      <li>Profit Reports: Weekly/monthly tracking.</li>
+    </ul>
+    
+    <h3>7. Daily Cash Flow Register</h3>
+    <ul>
+      <li>Cash Inflow: Payments received from sales.</li>
+      <li>Cash Outflow: Payments for raw materials, labor, and operational costs.</li>
+      <li>Cash Balance Calculation: Opening balance + cash inflow - cash outflow.</li>
+    </ul>
+    
+  </section>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
